@@ -45,7 +45,7 @@ app.post('/add-blog',(req,res)=>{
 
 //Delete blog (Admin only)
 app.get('/delete/:id',(req,res)=>{
-    let blogs=blogs.filter(l=>l.id!=parseInt(req.params.id));
+    blogs=blogs.filter(l=>l.id!=parseInt(req.params.id));
     res.redirect('/blogs');
 })
 
