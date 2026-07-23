@@ -27,8 +27,8 @@ app.get('/blogs',(req,res)=>{
     res.render('blogs',{blogs})
 });
 
-app.get('/blods/:id',(req,res)=>{
-    let blog=blogs.find(l=>l.id===req.params.id)
+app.get('/blogs/:id',(req,res)=>{
+    let blog=blogs.find(l=>l.id===parseInt(req.params.id))
     if(!blog){return res.status(404).send('file does not exist')}
     res.render('blogDetails',{blog})
 });
@@ -44,8 +44,8 @@ app.post('/add-blog',(req,res)=>{
 });
 
 //Delete blog (Admin only)
-app.get('//delete/:id',(req,res)=>{
-    let blog=blogs.filter(l=>l.id!=parseInt(req.params.id));
+app.get('/delete/:id',(req,res)=>{
+    let blogs=blogs.filter(l=>l.id!=parseInt(req.params.id));
     res.redirect('/blogs');
 })
 
