@@ -3,7 +3,7 @@ import bodyParser from 'body-parser'
 import { title } from 'node:process';
  
 const app=express();
-const port=3000;
+const PORT=3000;
 
 
 //Middleware
@@ -33,7 +33,29 @@ app.get('/blods/:id',(req,res)=>{
     res.render('blogDetails',{blog})
 });
 
-app.get('add-blog',(req,res)=>{
+app.get('/add-blog',(req,res)=>{
     res.render('addBlog')
+});
+
+app.post('/add-blog',(req,res)=>{
+   let {title,content,author}=req.body;
+   blogs.push({id:blogs.length+1,title,content,author})
+   res.redirect('/blogs')
+});
+
+//Delete blog (Admin only)
+app.get('//delete/:id',(req,res)=>{
+    let blog=blogs.filter(l=>l.id!=parseInt(req.params.id));
+    res.redirect('/blogs');
 })
+
+//404 Page
+app.use((req,res)=>{
+    res.status(404).render('404',{msg:'404 - Page Not Found'})
+});
+
+//Start server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
 
