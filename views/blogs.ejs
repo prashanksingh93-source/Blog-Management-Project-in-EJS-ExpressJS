@@ -6,8 +6,8 @@
   <li>
     <a href="/blogs/<%= blog.id %>"><%= blog.title %></a> by
     <b><%= blog.author %></b>
-    <% if(blog.author === 'Admin') { %>
-    <span style="color: red">(Admin)</span>
+    <% if(blog.author!='Admin') { %>
+    <span style="color: red"></span>
     <a href="/delete/<%= blog.id %>" style="color: red; margin-left: 10px"
       >[Delete]</a
     >
