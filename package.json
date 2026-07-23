@@ -2,25 +2,14 @@
   "name": "y",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/prashanksingh93-source/Blog-Management-Project--n-EJS---ExpressJS#readme",
-  "bugs": {
-    "url": "https://github.com/prashanksingh93-source/Blog-Management-Project--n-EJS---ExpressJS/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/prashanksingh93-source/Blog-Management-Project--n-EJS---ExpressJS.git"
-  },
-  "license": "ISC",
-  "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "dependencies": {
     "ejs": "^6.0.1",
     "express": "^5.2.1",
-    "init": "^0.1.2"
-  },
-  "devDependencies": {}
+    "body-parser": "^1.20.3"
+  }
 }
