@@ -1,4 +1,4 @@
-# 📝 Blog Management Project in EJS & ExpressJS
+# 📝 Blog Management Project in EJS & ExpressJS!
 
 A simple and responsive **Blog Management System** built using **Express.js** and **EJS (Embedded JavaScript Templates)**. This project allows users to create, view, and delete blog posts with dynamic server-side rendering.
 
